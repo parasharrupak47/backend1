@@ -13,6 +13,10 @@ app.get('/login',(req,res)=>{
     res.send("<h1>You have made a server</h1>")
 })
 
+app.get('/logout',(req,res)=>{
+    res.send("<h1>You have logged out</h1>");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)
 })

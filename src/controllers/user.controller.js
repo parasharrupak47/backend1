@@ -116,7 +116,7 @@ const loginUser = asynchandler(async (req, res) => {
     throw new ApiError(404 , "User not found");
   }
 
-  const isPasswordValid = await user.comparePassword(password);
+  const isPasswordValid = await user.isPasswordCorrect(password);
 
   if(!isPasswordValid){
     throw new ApiError(401 , "Invalid password");
